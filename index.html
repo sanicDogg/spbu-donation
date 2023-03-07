@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержать хостинг бота</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <style>
+        body {
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        p {
+            text-align: center;
+            margin: 3em 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 280px;
+        }
+
+        @media (max-width: 430px) {
+            p {
+                margin: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет!</h1>
+    <p>Если ты хочешь внести свою лепту в поддержку и обслуживание бота, воспользуйся кнопкой ниже 😊</p>
+
+    <iframe src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=5OPvdgMFRRQ.230307&" width="237" height="50" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+    <p>Можно перевести без комисси на карту сбера 4817760239474236 Александр Дмитриевич М.</p>
+
+    <div class="container">
+        <img width="300" src="1.jpg">
+    </div>
+
+    <p>Средства пойдут на оплату хостинга для поддержания работоспособности бота</p>
+
+    <script>
+        const img = document.querySelector('img');
+        const paths = ['1.jpg', '2.jpg', '3.jpg', '4.gif', '5.gif', '6.jpg'];
+        let currentPath = 0;
+
+        const switchImage = () => {
+            img.setAttribute('src', paths[currentPath++]);
+            currentPath = currentPath > (paths.length - 1) ? 0 : currentPath;
+        }
+
+        setInterval(switchImage, 1000);
+    </script>
+</body>
+</html>
